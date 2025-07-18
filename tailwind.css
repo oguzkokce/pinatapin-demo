@@ -1,0 +1,175 @@
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
+:root {
+  --black: rgba(37, 37, 37, 1);
+  --body-small-medium-font-family: "Inter", Helvetica;
+  --body-small-medium-font-size: 14px;
+  --body-small-medium-font-style: normal;
+  --body-small-medium-font-weight: 500;
+  --body-small-medium-letter-spacing: -0.14000000000000004px;
+  --body-small-medium-line-height: 140%;
+  --BOLD-20-font-family: "Inter", Helvetica;
+  --BOLD-20-font-size: 20px;
+  --BOLD-20-font-style: normal;
+  --BOLD-20-font-weight: 700;
+  --BOLD-20-letter-spacing: 0px;
+  --BOLD-20-line-height: normal;
+  --brand-gray: rgba(244, 250, 251, 1);
+  --brand-light-purple: rgba(197, 139, 217, 1);
+  --brand-purple: rgba(137, 24, 186, 1);
+  --brand-red: rgba(225, 58, 113, 1);
+  --gray: rgba(233, 233, 233, 1);
+  --gray-light: rgba(242, 242, 242, 1);
+  --l-10-font-family: "Inter", Helvetica;
+  --l-10-font-size: 10px;
+  --l-10-font-style: normal;
+  --l-10-font-weight: 300;
+  --l-10-letter-spacing: 0px;
+  --l-10-line-height: normal;
+  --medium-type-12-font-family: "Plus Jakarta Sans", Helvetica;
+  --medium-type-12-font-size: 12px;
+  --medium-type-12-font-style: normal;
+  --medium-type-12-font-weight: 500;
+  --medium-type-12-letter-spacing: -0.24px;
+  --medium-type-12-line-height: 160%;
+  --neutralgrey-700: rgba(31, 41, 55, 1);
+  --primary-0: rgba(255, 255, 255, 1);
+  --r14-font-family: "Inter", Helvetica;
+  --r14-font-size: 14px;
+  --r14-font-style: normal;
+  --r14-font-weight: 400;
+  --r14-letter-spacing: 0px;
+  --r14-line-height: normal;
+  --r16-font-family: "Inter", Helvetica;
+  --r16-font-size: 16px;
+  --r16-font-style: normal;
+  --r16-font-weight: 400;
+  --r16-letter-spacing: 0px;
+  --r16-line-height: normal;
+  --secondary-100: rgba(237, 241, 243, 1);
+  --secondary-500: rgba(26, 28, 30, 1);
+  --sm12-font-family: "Inter", Helvetica;
+  --sm12-font-size: 12px;
+  --sm12-font-style: normal;
+  --sm12-font-weight: 600;
+  --sm12-letter-spacing: 0px;
+  --sm12-line-height: normal;
+  --sm18-font-family: "Inter", Helvetica;
+  --sm18-font-size: 18px;
+  --sm18-font-style: normal;
+  --sm18-font-weight: 600;
+  --sm18-letter-spacing: 0px;
+  --sm18-line-height: normal;
+  --text-font-family: "Inter", Helvetica;
+  --text-font-size: 14px;
+  --text-font-style: normal;
+  --text-font-weight: 700;
+  --text-letter-spacing: 0px;
+  --text-line-height: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+
+    --card: transparent;
+    --card-foreground: 222.2 47.4% 11.2%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 100% 50%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 215 20.2% 65.1%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 224 71% 4%;
+    --foreground: 213 31% 91%;
+
+    --muted: 223 47% 11%;
+    --muted-foreground: 215.4 16.3% 56.9%;
+
+    --accent: 216 34% 17%;
+    --accent-foreground: 210 40% 98%;
+
+    --popover: 224 71% 4%;
+    --popover-foreground: 215 20.2% 65.1%;
+
+    --border: 216 34% 17%;
+    --input: 216 34% 17%;
+
+    --card: transparent;
+    --card-foreground: 213 31% 91%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 1.2%;
+
+    --secondary: 222.2 47.4% 11.2%;
+    --secondary-foreground: 210 40% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 210 40% 98%;
+
+    --ring: 216 34% 17%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}

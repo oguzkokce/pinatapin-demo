@@ -1,0 +1,1 @@
+export { Anasayfa } from "./Anasayfa";
